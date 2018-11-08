@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
-import Keyboard from './Components/Keyboard'
+import Calculator from './Components/Calculator'
+import styles from './assets/scss/styles.scss'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Keyboard />
+      <div>
+        <Calculator />
       </div>
     );
   }

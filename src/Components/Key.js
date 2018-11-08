@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './styles.scss'
 
 class Key extends React.Component {
   constructor () {
@@ -7,9 +6,9 @@ class Key extends React.Component {
   }
 
   render() {
-    console.log('styles', styles)
+    const className = [(this.props.className || 'key'), this.props.color].join(" ")
     return (
-      <td className={styles.key} colSpan={this.props.colSpan || 1}>{this.props.value}</td>
+      <td className={className} colSpan={this.props.colSpan || 1}>{this.props.value}</td>
     );
   }
 }

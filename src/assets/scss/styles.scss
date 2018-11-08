@@ -1,0 +1,81 @@
+// COLORS
+$default_key: #D5D5D5;
+$orange_key: #FF8635;
+$dark_text: #4F4F4F;
+$white_text: #F4F4F4;
+$key_border: #9E9E9E;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 300px;
+  height: 350px;
+
+  tr:last-child {
+    td:first-child {
+      border-bottom-left-radius: 4px;
+    }
+
+    td:last-child {
+      border-bottom-right-radius: 4px;
+    }
+  }
+
+  tr:first-child {
+    td:first-child {
+      border-top-left-radius: 4px;
+    }
+
+    td:last-child {
+      border-top-right-radius: 4px;
+    }
+  }
+
+  td {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  }
+}
+
+.row {
+  border-bottom: 2px solid $key_border;
+
+  &:last-child {
+    border-bottom: 0
+  }
+}
+
+.key {
+  width: 20%;
+  min-height: 20%;
+
+  color: $dark_text;
+  background-color: $default_key;
+  border-right: 2px solid $key_border;
+  text-align: center;
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.orange {
+  color: $white_text;
+  background-color: $orange_key;
+}
+
+.screen {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $white_text;
+  text-align: right;
+  vertical-align: bottom;
+  padding: 5px 10px;
+  height: 50px;
+}

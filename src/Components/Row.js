@@ -8,7 +8,7 @@ class Row extends React.Component {
 
   render() {
     return (
-      <tr>
+      <tr className={'row'}>
         {this.props.keys.map((key, i) => {
           return <Key {...key} key={i} />
         })}

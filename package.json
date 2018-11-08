@@ -1,26 +1,66 @@
 {
   "name": "macos-calculator",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "node-sass": "^4.10.0",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
-  },
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server",
+    "clean": "rimraf dist",
+    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "prepush": "cross-env npm run lint && npm test",
+    "webpack:dev": "webpack --colors",
+    "webpack:prod": "webpack --config webpack.production.config.js --colors"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "Kliment Petrov <kleopetroff@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "5.2.0",
+    "react": "16.6.1",
+    "react-dom": "16.6.1",
+    "react-hot-loader": "4.3.12",
+    "react-router-dom": "4.3.0"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "devDependencies": {
+    "@babel/cli": "7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-stage-2": "7.0.0",
+    "@babel/register": "7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "8.0.3",
+    "babel-preset-react-hmre": "1.1.1",
+    "copy-webpack-plugin": "4.6.0",
+    "css-hot-loader": "1.4.2",
+    "css-loader": "1.0.1",
+    "enzyme": "3.7.0",
+    "enzyme-adapter-react-16": "1.6.0",
+    "eslint": "5.0.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.11.1",
+    "extract-text-webpack-plugin": "4.0.0-beta.0",
+    "file-loader": "1.1.11",
+    "html-webpack-plugin": "3.2.0",
+    "jest": "23.6.0",
+    "node-sass": "4.10.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "react-addons-test-utils": "15.6.2",
+    "react-test-renderer": "16.6.0",
+    "regenerator-runtime": "0.12.1",
+    "rimraf": "2.6.2",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "uglifyjs-webpack-plugin": "1.3.0",
+    "url-loader": "1.1.2",
+    "webpack": "4.19.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.9"
+  }
 }
