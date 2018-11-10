@@ -8,7 +8,10 @@ class Key extends React.Component {
   render() {
     const className = [(this.props.className || 'key'), this.props.color].join(" ")
     return (
-      <td className={className} colSpan={this.props.colSpan || 1}>{this.props.value}</td>
+      <td className={className} colSpan={this.props.colSpan || 1}>
+        {this.props.icons}
+        {this.props.value}
+      </td>
     );
   }
 }

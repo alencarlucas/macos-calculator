@@ -7,7 +7,7 @@ class Screen extends React.Component {
   }
 
   render() {
-    return <Row keys={[{className: 'screen', value: 42, colSpan: 4 }]} />
+    return <Row keys={[{className: 'screen', value: 42, colSpan: 4, icons: <span><i className={"fas fa-circle red"}></i><i className={"fas fa-circle yellow"}></i><i className={"fas fa-circle green"}></i></span> }]} />
   }
 }
 

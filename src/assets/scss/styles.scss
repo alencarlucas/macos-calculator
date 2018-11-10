@@ -1,11 +1,16 @@
 // COLORS
 $default_key: #D5D5D5;
-$orange_key: #FF8635;
-$dark_text: #4F4F4F;
+$orange_key: #FF9500;
+$dark_text: #151515;
 $white_text: #F4F4F4;
-$key_border: #9E9E9E;
+$key_border: #B8B8B8;
+$red: #ff313a;
+$yellow: #ffcc00;
+$green: #28cd41;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
 
 .root {
   display: flex;
@@ -21,6 +26,8 @@ $key_border: #9E9E9E;
   tr:last-child {
     td:first-child {
       border-bottom-left-radius: 4px;
+      text-align: left;
+      padding-left: 29px;
     }
 
     td:last-child {
@@ -38,9 +45,43 @@ $key_border: #9E9E9E;
     }
   }
 
+  .screen {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $white_text;
+    text-align: right;
+    vertical-align: bottom;
+    padding: 5px 10px;
+    height: 75px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62px;
+
+    span {
+      position: relative;
+      top: -73%;
+      right: 58%;
+      font-size: 12px;
+
+      i {
+        padding: 0 5px 0 0;
+      }
+
+      .red {
+        color: $red;
+      }
+
+      .yellow {
+        color: $yellow;
+      }
+
+      .green {
+        color: $green;
+      }
+    }
+  }
+
   td {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 26px;
   }
 }
 
@@ -55,6 +96,7 @@ $key_border: #9E9E9E;
 .key {
   width: 20%;
   min-height: 20%;
+  opacity: 0.75;
 
   color: $dark_text;
   background-color: $default_key;
@@ -71,11 +113,3 @@ $key_border: #9E9E9E;
   background-color: $orange_key;
 }
 
-.screen {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: $white_text;
-  text-align: right;
-  vertical-align: bottom;
-  padding: 5px 10px;
-  height: 50px;
-}
